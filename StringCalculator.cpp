@@ -79,10 +79,13 @@ std::vector<int> StringCalculator::extractDigits(std::string input)
 int StringCalculator::add(std::string input)
 {
     int sum=0;
-     for(const auto& item:ExtractedIntInputData)
-      {
-          sum += item;
-      }
+    if(isValidInput(input))
+    {
+         for(const auto& item:ExtractedIntInputData)
+          {
+              sum += item;
+          }
+    }
 
   return sum;
 }
