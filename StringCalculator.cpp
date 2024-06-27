@@ -9,10 +9,9 @@ StringCalculator::StringCalculator()
 }
 bool StringCalculator::isValidInput(std::string input)
 {    
-     bool result = false;
-     //std::vector<int> extractedData;
-     ExtractedIntInputData=extractInputData(input);
-     if(extractDigits.size()==0)
+     bool result = false;     
+     ExtractedIntInputData=extractNumbers(input);
+     if(ExtractedIntInputData.size()==0)
      {
         result=false;
      }else
@@ -30,7 +29,7 @@ bool StringCalculator::isValidInput(std::string input)
       }
         return result; 
 }
-std::vector<int> StringCalculator::extractDigits(std::string input)
+std::vector<int> StringCalculator::extractNumbers(std::string input)
 {
         ExtractedIntInputData.clear();
         if (!input.empty())
