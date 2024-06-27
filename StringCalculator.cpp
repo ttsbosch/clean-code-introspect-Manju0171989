@@ -11,22 +11,19 @@ bool StringCalculator::isValidInput(std::string input)
 {    
      bool result = false;     
      ExtractedIntInputData=extractNumbers(input);
-     if(ExtractedIntInputData.size()==0)
+     if(ExtractedIntInputData.size()!=0)
      {
-        result=false;
-     }else
-     {
-        result = true;
-     }
-     for(const auto& item:ExtractedIntInputData)
-      {
-          if(item<0)
+         for(const auto& item:ExtractedIntInputData)
           {
-              result=false;
-              break;
+              if(item<0)
+              {
+                  result=false;
+                  break;
+              }
+              result=true;
+                  
           }
-              
-      }
+     }
         return result; 
 }
 std::vector<int> StringCalculator::extractNumbers(std::string input)
