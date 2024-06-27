@@ -27,16 +27,16 @@ bool StringCalculator::isValidInput(std::string input)
 }
 std::vector<int> StringCalculator::extractDigits(std::string input)
 {
-        inputData.clear();
+        ExtractedIntInputData.clear();
         if (!inputData.empty())
         {
             
            // Check for custom delimiter
             std::string delimiter = ",";
-            std::string numbers_part = numbers;
+            std::string numbers_part = input;
     
             // if (numbers.substr(0, 2) == "//") {
-            //     std::tie(delimiter, numbers_part) = parseCustomDelimiter(numbers);
+            //     std::tie(delimiter, numbers_part) = parseCustomDelimiter(input);
             // }
     
             // Split numbers based on delimiter or newline
