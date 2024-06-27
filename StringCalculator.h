@@ -4,8 +4,9 @@
 
 class StringCalculator
 {
+     std::vector<int> ExtractedIntInputData;
      bool validateInput(std::string input);
-     void extractInputData(std::string input,std::vector<int>&inputData);
+     std::vector<int> StringCalculator::extractDigits(std::string input);
     public:
        int add(std::string input);
 };
