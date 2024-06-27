@@ -3,28 +3,28 @@
 #include <vector>
 #include <regex>
 #include "StringCalculator.h"
+#include <algorithm>
+
 StringCalculator::StringCalculator()
 {
     ExtractedIntInputData.clear();
+}
+
+int  checkZeroPresent(const std::vector<int>& elems) {
+    return std::count_if(elems.begin(), elems.end(), [](int c){return c==0;});
+}
+int  checkNegativePresent(const std::vector<int>& elems) {
+    return std::count_if(elems.begin(), elems.end(), [](int c){return c==0;});
 }
 bool StringCalculator::isValidInput(std::string input)
 {    
      bool result = false;     
      ExtractedIntInputData=extractNumbers(input);
-     if(ExtractedIntInputData.size()!=0)
+     if((ExtractedIntInputData.size()!=0)&&(checkZeroPresent(ExtractedIntInputData)!=0)
      {
-         for(const auto& item:ExtractedIntInputData)
-          {
-              if(item<0)
-              {
-                  result=false;
-                  break;
-              }
-              result=true;
-                  
-          }
+        result=true;
      }
-        return result; 
+    return result; 
 }
 std::vector<int> StringCalculator::extractNumbers(std::string input)
 {
