@@ -28,7 +28,7 @@ bool StringCalculator::isValidInput(std::string input)
 std::vector<int> StringCalculator::extractDigits(std::string input)
 {
         ExtractedIntInputData.clear();
-        if (!inputData.empty())
+        if (!input.empty())
         {
             
            // Check for custom delimiter
