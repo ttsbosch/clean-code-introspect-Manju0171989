@@ -57,7 +57,7 @@ std::vector<int> StringCalculator::extractDigits(std::string input)
                 if (!token.empty()) 
                 {
                     int num = std::stoi(token);
-                    inputData.push_back(num);
+                    ExtractedIntInputData.push_back(num);
                 }
             }
         }
