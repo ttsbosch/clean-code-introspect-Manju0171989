@@ -31,7 +31,7 @@ bool StringCalculator::isValidInput(std::string input)
 }
 std::vector<int> StringCalculator::extractNumbers(std::string input)
 {
-        ExtractedIntInputData.clear();
+        //ExtractedIntInputData.clear();
         if (!input.empty())
         {
             
