@@ -1,9 +1,27 @@
 #include "StringCalculator.h"
+StringCalculator::StringCalculator
+{
+    ExtractedIntInputData.clear();
+}
 bool StringCalculator::isValidInput(std::string input)
 {    
-
+     bool result = false;
+     //std::vector<int> extractedData;
+     ExtractedIntInputData=extractInputData(input);
+     if(extractDigits.size()==0)
+     {
+        result=false;
+     }else
+     {
+        result = true;
+     }
+     // for(const auto& item:extractedData)
+     //  {
+     //      if(item<0)
+     //  }
+        return result; 
 }
-void StringCalculator::extractInputData(std::string input,std::vector<int>&inputData)
+std::vector<int> StringCalculator::extractDigits(std::string input)
 {
         inputData.clear();
         if (!inputData.empty())
@@ -13,9 +31,9 @@ void StringCalculator::extractInputData(std::string input,std::vector<int>&input
             std::string delimiter = ",";
             std::string numbers_part = numbers;
     
-            if (numbers.substr(0, 2) == "//") {
-                std::tie(delimiter, numbers_part) = parseCustomDelimiter(numbers);
-            }
+            // if (numbers.substr(0, 2) == "//") {
+            //     std::tie(delimiter, numbers_part) = parseCustomDelimiter(numbers);
+            // }
     
             // Split numbers based on delimiter or newline
             std::regex regex("[\n" + delimiter + "]");
@@ -24,8 +42,7 @@ void StringCalculator::extractInputData(std::string input,std::vector<int>&input
                 std::sregex_token_iterator()
             );
     
-            // Convert to integers 
-            std::vector<int> inputData;
+            // Convert to integers            
             for (const auto& token : tokens) 
             {
                 if (!token.empty()) 
@@ -52,13 +69,13 @@ void StringCalculator::extractInputData(std::string input,std::vector<int>&input
     }
 int StringCalculator::add(std::string input)
 {
-    int result=0;
-    if(input.empty())
-    {
-      result=0;
-    }
+    int sum=0;
+     for(const auto& item:ExtractedIntInputData)
+      {
+          sum += item;
+      }
 
-  return result;
+  return sum;
 }
 
 
