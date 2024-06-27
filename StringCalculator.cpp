@@ -19,7 +19,7 @@ bool StringCalculator::isValidInput(std::string input)
      {
         result = true;
      }
-     for(const auto& item:extractedData)
+     for(const auto& item:ExtractedIntInputData)
       {
           if(item<0)
           {
