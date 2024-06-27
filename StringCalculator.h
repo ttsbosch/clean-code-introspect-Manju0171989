@@ -9,4 +9,5 @@ class StringCalculator
      std::vector<int> StringCalculator::extractDigits(std::string input);
     public:
        int add(std::string input);
+       StringCalculator();
 };
