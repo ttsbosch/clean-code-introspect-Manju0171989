@@ -19,10 +19,15 @@ bool StringCalculator::isValidInput(std::string input)
      {
         result = true;
      }
-     // for(const auto& item:extractedData)
-     //  {
-     //      if(item<0)
-     //  }
+     for(const auto& item:extractedData)
+      {
+          if(item<0)
+          {
+              result=false;
+              break;
+          }
+              
+      }
         return result; 
 }
 std::vector<int> StringCalculator::extractDigits(std::string input)
