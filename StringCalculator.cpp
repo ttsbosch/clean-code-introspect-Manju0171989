@@ -1,3 +1,7 @@
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <regex>
 #include "StringCalculator.h"
 StringCalculator::StringCalculator
 {
