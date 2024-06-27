@@ -1,8 +1,14 @@
 #include<iostream>
 #include<string>
+#include<vector>
 
-using namespace std;
-class StringCalculator{
+class StringCalculator
+{
+     std::vector<int> ExtractedIntInputData;
+     bool isValidInput(std::string input);
+     std::vector<int> extractNumbers(std::string input);
+     std::pair<std::string, std::string> parseCustomDelimiter(const std::string& numbers);
     public:
-    int add(string input);
+       int add(std::string input);
+       StringCalculator();
 };
