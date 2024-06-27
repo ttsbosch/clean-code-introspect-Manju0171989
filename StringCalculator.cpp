@@ -20,7 +20,7 @@ bool StringCalculator::isValidInput(std::string input)
 {    
      bool result = false;     
      ExtractedIntInputData=extractNumbers(input);
-     if((ExtractedIntInputData.size()!=0)&&(checkZeroPresent(ExtractedIntInputData)!=0)
+     if((ExtractedIntInputData.size()!=0)&&(checkZeroPresent(ExtractedIntInputData)!=0))
      {
         result=true;
      }
