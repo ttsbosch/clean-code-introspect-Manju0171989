@@ -3,7 +3,7 @@
 #include <vector>
 #include <regex>
 #include "StringCalculator.h"
-StringCalculator::StringCalculator
+StringCalculator::StringCalculator()
 {
     ExtractedIntInputData.clear();
 }
